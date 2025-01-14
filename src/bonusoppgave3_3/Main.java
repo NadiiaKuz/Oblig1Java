@@ -18,11 +18,12 @@ public class Main {
 
             System.out.println("Hva vil du? 1-vise/ 2-slette/ 3-oppdatere/ 4-registrere/ 5-exit: ");
             int choise = scanner.nextInt();
+            scanner.nextLine(); //bush cleaning
 
             switch (choise){
                 case 1:
                     for (int i=0;i< planeter.size();i++){
-                        System.out.printf("Planeten %s har en radius på %s km og en masse på %s kg", planeter.get(i).getName(), planeter.get(i).getRadius(), planeter.get(i).getMass());
+                        System.out.printf("\nPlaneten %s har en radius på %s km og en masse på %s kg", planeter.get(i).getName(), planeter.get(i).getRadius(), planeter.get(i).getMass());
                     }
                     break;
                 case 2:
@@ -37,8 +38,11 @@ public class Main {
                 case 3:
                     System.out.println("Hvilke planet vil du oppdatere?: ");
                     String oppdatertPlanet = scanner.nextLine();
+                    scanner.nextLine(); //bush cleaning
+
                     for (int i=0; i< planeter.size();i++){
                         if (Objects.equals(planeter.get(i).getName(), oppdatertPlanet)){
+
                             System.out.println("Skriv inn ny navn på planeten: ");
                             String inputName = scanner.nextLine();
 
@@ -67,6 +71,7 @@ public class Main {
                     planeter.add(new Planet(inputName, inputRadius, inputMass));
 
                     System.out.println("Planet er registrert");
+                    break;
                 case 5:
                     isRunning = false;
                     break;
