@@ -19,5 +19,7 @@ public class Main {
         Planet planet = new Planet(inputName, inputRadius, inputMass);
 
         System.out.printf("Planeten %s har en radius på %s km og en masse på %s kg", planet.getName(), planet.getRadius(), planet.getMass());
+
+        scanner.close();
     }
 }

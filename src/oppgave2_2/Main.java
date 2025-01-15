@@ -6,13 +6,15 @@ public class Main {
 
         double moonGravity = 16.5 / 100;
 
-        Scanner myObj = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Skriv inn din vekt(kg): ");
-        int userInput =myObj.nextInt();
+        System.out.println("Skriv vekten din (kg): ");
+        int userInput =scanner.nextInt();
 
         double moonVekt = userInput * moonGravity;
 
         System.out.printf("Din vekt på månen er: %.2f%n", moonVekt);
+
+        scanner.close();
     }
 }

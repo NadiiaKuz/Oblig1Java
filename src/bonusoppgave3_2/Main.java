@@ -22,16 +22,19 @@ public class Main {
 
             Planet planet = new Planet(inputName, inputRadius, inputMass);
 
-            System.out.printf("Planeten %s har en radius på %s km og en masse på %s kg", planet.getName(), planet.getRadius(), planet.getMass());
+            System.out.printf("Planeten %s har en radius på %.2f km og en masse på %.2E kg",
+                    planet.getName(), planet.getRadius(), planet.getMass());
 
             System.out.println("\n--------------\n");
 
             System.out.println("Vil du fortsette? Y/N: ");
             String input = scanner.nextLine();
 
-            if (input.equalsIgnoreCase("y")){
+            if (input.equalsIgnoreCase("n")){
                 break;
             }
         }
+
+        scanner.close();
     }
 }

@@ -23,7 +23,7 @@ public class Main {
             switch (choise){
                 case 1:
                     for (int i=0;i< planeter.size();i++){
-                        System.out.printf("\nPlaneten %s har en radius på %s km og en masse på %s kg", planeter.get(i).getName(), planeter.get(i).getRadius(), planeter.get(i).getMass());
+                        System.out.printf("\nPlaneten %s har en radius på %.1f km og en masse på %.2E kg %n", planeter.get(i).getName(), planeter.get(i).getRadius(), planeter.get(i).getMass());
                     }
                     break;
                 case 2:
