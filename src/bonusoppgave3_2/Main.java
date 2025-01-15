@@ -1,7 +1,6 @@
 package bonusoppgave3_2;
 
 import oppgave2_3.Planet;
-
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +21,7 @@ public class Main {
 
             Planet planet = new Planet(inputName, inputRadius, inputMass);
 
-            System.out.printf("Planeten %s har en radius på %.2f km og en masse på %.2E kg",
+            System.out.printf("Planeten %s har en radius på %.1f km og en masse på %.2E kg %n",
                     planet.getName(), planet.getRadius(), planet.getMass());
 
             System.out.println("\n--------------\n");

@@ -22,13 +22,21 @@ public class Planet {
         return radius;
     }
     public void setRadius(double newRadius){
-        this.radius = newRadius;
+        if (newRadius > 0){
+            this.radius = newRadius;
+        } else {
+            throw new IllegalArgumentException("Radius må være positiv tall");
+        }
     }
 
     public double getMass(){
         return mass;
     }
     public void setMass(double newMass){
-        this.mass = newMass;
+        if (newMass > 0){
+            this.mass = newMass;
+        } else {
+            throw new IllegalArgumentException("Masse må være positiv tall");
+        }
     }
 }
